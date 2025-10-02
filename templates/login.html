@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+<body>
+<header class="navbar">
+    <div class="nav-logo">
+        <img src="{% static 'iconreview.png' %}">
+    </div>
+    <div class="nav-links">
+        <a href="{% url 'login' %}" class="nav-item login">Login</a>
+        <a href="{% url 'cadastro' %}" class="nav-item cadastro">Cadastro</a>
+        <a href="#" class="nav-item outro">Admin</a>
+    </div>
+</header>
+
+
+  <main class="container">
+    <section class="left-side">
+      <div class="layer layer1"></div>
+      <div class="layer layer2"></div>
+      <div class="layer layer3"></div>
+
+      
+    <div class="left-content">
+        <img src="{% static 'reviewescuro.png' %}">
+        <p>- UM NOVO OLHAR SOBRE O CINEMA -</p>
+    </div>
+    </section>
+
+    <section class="right-side">
+      <h1>LOGIN</h1>
+      <form method="post">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+
+        <p>
+          <label for="{{ form.username.id_for_label }}">Usuário ou Email</label><br>
+          {{ form.username }}
+        </p>
+
+        <p>
+          <label for="{{ form.password.id_for_label }}">Senha</label><br>
+          {{ form.password }}
+        </p>
+
+        <button type="submit">ENTRAR</button>
+      </form>
+
+      <p><a href="#">Esqueceu sua senha?</a></p>
+    </section>
+  </main>
+</body>
+</html>
