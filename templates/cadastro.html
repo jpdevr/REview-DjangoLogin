@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="{% static 'cadastro.css' %}">
+</head>
+<body>
+
+    <header class="navbar">
+    <div class="nav-logo">
+        <img src="{% static 'iconreview.png' %}">
+    </div>
+    <div class="nav-links">
+        <a href="{% url 'login' %}" class="nav-item login">Login</a>
+        <a href="{% url 'cadastro' %}" class="nav-item cadastro">Cadastro</a>
+        <a href="#" class="nav-item outro">Admin</a>
+    </div>
+    </header>
+
+<main class="container-vertical">
+  <section class="top-side">
+    <div class="layer layer1"></div>
+    <div class="layer layer2"></div>
+    <div class="layer layer3"></div>
+
+    <div class="top-content">
+  <div class="top-left">
+    <img src="{% static 'reviewescuro.png' %}">
+    <p>- UM NOVO OLHAR SOBRE O CINEMA -</p>
+  </div>
+      <div class="top-right">
+    <h1>CADASTRO</h1>
+  </div>
+    </div>
+  </section>
+
+  <section class="bottom-side">
+    <form method="post">
+      {% csrf_token %}
+
+      <p>
+        <label for="id_username">Usuário:</label>
+        {{ form.username }}
+      </p>
+      <p>
+        <label for="id_email">Email:</label>
+        {{ form.email }}
+      </p>
+      <p>
+        <label for="id_phone">Telefone:</label>
+        {{ form.phone }}
+      </p>
+      <p>
+        <label for="id_birth_date">Data de Nascimento:</label>
+        {{ form.birth_date }}
+      </p>
+      <p>
+        <label for="id_password1">Senha:</label>
+        {{ form.password1 }}
+      </p>
+      <p>
+        <label for="id_password2">Repetir Senha:</label>
+        {{ form.password2 }}
+      </p>
+
+      <button type="submit">Cadastrar</button>
+    </form>
+  </section>
+</main>
+</body>
+</html>
