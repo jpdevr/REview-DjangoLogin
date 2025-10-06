@@ -1,5 +1,5 @@
 # 🎬 REview – Plataforma Django de Login e Cadastro
-![Logo do REview](static/reviewescuro)
+![Logo do REview](static/reviewescuro.png)
 
 Um sistema de autenticação simples e moderno desenvolvido em **Django**, com transições suaves, ícones interativos e interface personalizada para login, cadastro e controle de usuários.
 
