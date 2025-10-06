@@ -8,7 +8,7 @@ Um sistema de autenticação simples e moderno desenvolvido em **Django**, com t
 ## 🚀 Funcionalidades
 - ✅ Cadastro de novos usuários com verificação de duplicatas  
 - 🔐 Login com autenticação Django nativa  
-- 🚪 Logout funcional com CSRF token  
+- 🚪 Logout funcional com
 - 🧩 Integração com o painel administrativo (`/admin`)  
 - 💅 Interface com animações, transições e ícones do Flaticon  
 - ⚙️ Estrutura pronta para expansão (perfis, reviews, etc.)
