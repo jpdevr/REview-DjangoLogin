@@ -21,7 +21,10 @@ instruções de uso:
 
 ## no terminal do vs code rode os seguintes comandos:
 $ python -m venv .venv
+
 $ source .venv/bin/activate
+
 $ pip install django
+
 $ python manage.py runserver
 
