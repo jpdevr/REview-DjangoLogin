@@ -5,19 +5,30 @@
     <meta charset="UTF-8">
     <title>Cadastro</title>
     <link rel="stylesheet" href="{% static 'cadastro.css' %}">
+    <link rel="stylesheet" href="{% static 'navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'transitions.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons/css/all/all.css">
 </head>
 <body>
-
-    <header class="navbar">
-    <div class="nav-logo">
-        <img src="{% static 'iconreview.png' %}">
-    </div>
-    <div class="nav-links">
-        <a href="{% url 'login' %}" class="nav-item login">Login</a>
-        <a href="{% url 'cadastro' %}" class="nav-item cadastro">Cadastro</a>
-        <a href="#" class="nav-item outro">Admin</a>
-    </div>
-    </header>
+<header class="navbar">
+  <div class="nav-logo">
+    <img src="{% static 'iconreview.png' %}">
+  </div>
+  <div class="nav-links">
+    <a href="{% url 'login' %}" class="nav-item login">
+      <i class="fi fi-rr-user"></i>
+      <span>Login</span>
+    </a>
+    <a href="{% url 'cadastro' %}" class="nav-item cadastro">
+      <i class="fi fi-rr-user-add"></i>
+      <span>Cadastro</span>
+    </a>
+    <a href="/admin/" class="nav-item outro">
+      <i class="fi fi-rr-lock"></i>
+      <span>Admin</span>
+    </a>
+  </div>
+</header>
 
 <main class="container-vertical">
   <section class="top-side">
@@ -49,12 +60,12 @@
         {{ form.email }}
       </p>
       <p>
-        <label for="id_phone">Telefone:</label>
-        {{ form.phone }}
+        <label for="id_first_name">Nome:</label>
+        {{ form.first_name }}
       </p>
       <p>
-        <label for="id_birth_date">Data de Nascimento:</label>
-        {{ form.birth_date }}
+        <label for="id_last_name">Sobrenome:</label>
+        {{ form.last_name }}
       </p>
       <p>
         <label for="id_password1">Senha:</label>
@@ -69,5 +80,6 @@
     </form>
   </section>
 </main>
+<script src="{% static 'transitions.js' %}"></script>
 </body>
 </html>

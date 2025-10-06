@@ -11,52 +11,6 @@ body {
   font-family: sans-serif;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    background-color: #120f2c;
-    padding: 0;
-}
-
-.nav-logo img{
-    height: 35px;
-}
-
-.nav-links {
-    display: flex;
-}
-
-.nav-item {
-    width: 60px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: transparent;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.4s ease;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-.nav-item.login {
-    background-color: #1f3c88;
-}
-.nav-item.cadastro {
-    background-color: #3b4c7a;
-}
-.nav-item.outro {
-    background-color: sienna;
-}
-
-.nav-item:hover {
-    width: 180px;
-    color: white;
-    justify-content: flex-start;
-    padding-left: 15px;
-}
-
 .container {
   display: flex;
   flex: 1;

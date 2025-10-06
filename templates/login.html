@@ -5,19 +5,30 @@
   <meta charset="UTF-8">
   <title>Login</title>
   <link rel="stylesheet" href="{% static 'login.css' %}">
+  <link rel="stylesheet" href="{% static 'navbar.css' %}">
+  <link rel="stylesheet" href="{% static 'transitions.css' %}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons/css/all/all.css">
 </head>
 <body>
 <header class="navbar">
-    <div class="nav-logo">
-        <img src="{% static 'iconreview.png' %}">
-    </div>
-    <div class="nav-links">
-        <a href="{% url 'login' %}" class="nav-item login">Login</a>
-        <a href="{% url 'cadastro' %}" class="nav-item cadastro">Cadastro</a>
-        <a href="#" class="nav-item outro">Admin</a>
-    </div>
+  <div class="nav-logo">
+    <img src="{% static 'iconreview.png' %}">
+  </div>
+  <div class="nav-links">
+    <a href="{% url 'login' %}" class="nav-item login">
+      <i class="fi fi-rr-user"></i>
+      <span>Login</span>
+    </a>
+    <a href="{% url 'cadastro' %}" class="nav-item cadastro">
+      <i class="fi fi-rr-user-add"></i>
+      <span>Cadastro</span>
+    </a>
+    <a href="/admin/" class="nav-item outro">
+      <i class="fi fi-rr-lock"></i>
+      <span>Admin</span>
+    </a>
+  </div>
 </header>
-
 
   <main class="container">
     <section class="left-side">
@@ -34,6 +45,9 @@
 
     <section class="right-side">
       <h1>LOGIN</h1>
+      {% if form.errors %}
+        <p style="color: red;">Usuário ou senha incorretos.</p>
+      {% endif %}
       <form method="post">
         {% csrf_token %}
         {{ form.non_field_errors }}
@@ -54,5 +68,6 @@
       <p><a href="#">Esqueceu sua senha?</a></p>
     </section>
   </main>
+  <script src="{% static 'transitions.js' %}"></script>
 </body>
 </html>
