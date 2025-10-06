@@ -14,3 +14,15 @@ document.querySelectorAll("a").forEach(link => {
         }, 300);
     });
 });
+
+document.querySelectorAll(".toggle-password").forEach((icon) => {
+  icon.addEventListener("click", () => {
+    const input = icon.nextElementSibling;
+    if (!input || input.tagName !== "INPUT") return;
+
+    const isPassword = input.type === "password";
+    input.type = isPassword ? "text" : "password";
+    icon.classList.toggle("fi-rr-eye");
+    icon.classList.toggle("fi-rr-eye-crossed");
+  });
+});

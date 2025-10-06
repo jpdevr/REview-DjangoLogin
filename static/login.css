@@ -137,3 +137,39 @@ body {
 .right-side a:hover {
   text-decoration: underline;
 }
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding: 10px 40px 10px 10px; /* espaço pro ícone */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+}
+
+.password-wrapper input:focus {
+  border-color: #1f3c88;
+  box-shadow: 0 0 5px rgba(31, 60, 136, 0.4);
+}
+
+.password-wrapper .toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #777;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.password-wrapper .toggle-password:hover {
+  color: #1f3c88;
+}
